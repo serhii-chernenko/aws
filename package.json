@@ -1,0 +1,34 @@
+{
+  "name": "aws",
+  "version": "1.0.0",
+  "description": "Run Node.js app on AWS EC2 server",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "node app/index.js",
+    "dev": "nodemon app/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serhii-chernenko/aws.git"
+  },
+  "keywords": [
+    "git",
+    "aws",
+    "node",
+    "linux",
+    "ec2"
+  ],
+  "author": "Serhii Chernenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/serhii-chernenko/aws/issues"
+  },
+  "homepage": "https://github.com/serhii-chernenko/aws#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,19 @@
+
+- name: Check if the app is existing on server
+  stat:
+    path: {{ dir }}
+  register: result
+
+- name: Clone repo
+  git:
+    repo: "git@github.com:{{ GITHUB_REPO}}.git"
+    dest: {{ dir }}
+  when: not result.stat.exists
+
+- name: Update repo
+  git:
+    repo: "git@github.com:{{ GITHUB_REPO}}.git"
+    dest: {{ dir }}
+    update: yes
+    single_branch: yes
+    version: main
