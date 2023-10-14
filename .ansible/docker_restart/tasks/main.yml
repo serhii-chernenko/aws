@@ -1,5 +1,5 @@
 - name: Build Docker image
-  docker_image:
+  community.docker.docker_image:
     name: app_image
     state: present
     force_source: yes
@@ -9,7 +9,7 @@
       dockerfile: .docker/Dockerfile
 
 - name: Restart Docker container
-  docker_container:
+  community.docker.docker_container:
     name: app
     image: app_image
     restart: yes

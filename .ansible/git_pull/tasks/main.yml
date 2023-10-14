@@ -1,17 +1,17 @@
 
 - name: Check if the app is existing on server
-  stat:
+  ansible.builtin.stat:
     path: "{{ dir }}"
   register: result
 
 - name: Clone repo
-  git:
+  ansible.builtin.git:
     repo: "git@github.com:{{ GITHUB_REPO}}.git"
     dest: "{{ dir }}"
   when: not result.stat.exists
 
 - name: Update repo
-  git:
+  ansible.builtin.git:
     repo: "git@github.com:{{ GITHUB_REPO}}.git"
     dest: "{{ dir }}"
     update: yes
