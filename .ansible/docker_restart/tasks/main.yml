@@ -5,7 +5,7 @@
     force_source: yes
     source: build
     build:
-      path: {{ dir }}
+      path: "{{ dir }}"
       dockerfile: .docker/Dockerfile
 
 - name: Restart Docker container
@@ -17,4 +17,4 @@
     ports:
       - "3000:3000"
     env:
-      NODE_ENV: {{ NODE_ENV }}
+      NODE_ENV: "{{ NODE_ENV }}"
