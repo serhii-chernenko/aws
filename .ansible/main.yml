@@ -1,0 +1,9 @@
+- name: Build Node.js app on AWS EC2
+  hosts: all
+  remote_user: inevix
+  vars:
+    dir: {{ APP_PATH }}
+    ansible_python_interpreter: /usr/bin/python3
+  roles:
+    - git_pull
+    - docker_restart
