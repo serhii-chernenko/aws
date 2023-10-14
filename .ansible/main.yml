@@ -1,6 +1,6 @@
 - name: Build Node.js app on AWS EC2
   hosts: all
-  remote_user: inevix
+  remote_user: ec2-user
   vars:
     dir: "{{ APP_PATH }}"
     ansible_python_interpreter: /usr/bin/python3
